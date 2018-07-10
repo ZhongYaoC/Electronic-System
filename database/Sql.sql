@@ -11,7 +11,7 @@ Data_id 4018071001
 --用户信息
 create table user_info
 (
-	--limit 2:engineer 1:manage 0 :normal
+	--limit 0 :normal 1:engineer 2:manage 
 	User_id bigint identity(1018071001,1) not null primary key,
 	User_name VARCHAR(30) not null,
 	User_pwd VARCHAR(10) not null DEFAULT '111',

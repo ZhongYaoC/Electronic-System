@@ -37,5 +37,9 @@ namespace 风力发电厂
 
         }
 
+        private void 维修计划ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
