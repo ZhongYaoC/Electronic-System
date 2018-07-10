@@ -74,5 +74,10 @@ namespace 风力发电厂
             }
             
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
