@@ -19,7 +19,15 @@ namespace 风力发电厂
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            Application.Exit();   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Form form = new FormMain();
+            form.Show();
+            this.Hide();
         }
     }
 }

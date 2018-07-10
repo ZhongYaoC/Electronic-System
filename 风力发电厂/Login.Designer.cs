@@ -75,17 +75,18 @@
             this.button1.Font = new System.Drawing.Font("隶书", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.Location = new System.Drawing.Point(249, 341);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(83, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "登陆";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("隶书", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.Location = new System.Drawing.Point(406, 341);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(85, 34);
             this.button2.TabIndex = 4;
             this.button2.Text = "退出";
             this.button2.UseVisualStyleBackColor = true;
@@ -119,11 +120,11 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "普通员工",
             "高级工程师",
             "系统管理员"});
-            this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(375, 226);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(159, 20);

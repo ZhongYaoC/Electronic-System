@@ -1,3 +1,131 @@
-﻿create database ElectronicSystem
+﻿--create database ElectronicSystem
 
-create table 
+/*编码设计
+User_id 1018071001
+Meter_id 2018071001
+sernum 10001
+Supplier_id 3018071001
+Component_id 1001
+Data_id 4018071001
+*/
+--用户信息
+create table user_info
+(
+	--limit 2:engineer 1:manage 0 :normal
+	User_id bigint identity(1018071001,1) not null primary key,
+	User_name VARCHAR(30) not null,
+	User_pwd VARCHAR(10) not null DEFAULT '111',
+	User_limit int not null
+)
+
+insert into user_info
+	(User_name,User_pwd,User_limit)
+VALUES
+	('张华', '111', 1),
+	('王小伟', '111', 2),
+	('王莞尔', '111', 2),
+	('张明华', '111', 0),
+	('李一琛', '111', 0),
+	('李二飞', '111', 0);
+
+--供应商信息
+CREATE TABLE supplier_info
+(
+	Supplier_id bigint identity(3018071001,1) not NULL PRIMARY KEY,
+	Supplier_name VARCHAR(30) not NULL,
+	Supplier_addr VARCHAR(10)
+)
+
+INSERT INTO supplier_info
+	(Supplier_name,Supplier_addr)
+VALUES
+	('江南电机制造厂', '江苏'),
+	('迅雷叶片制造厂', '天津'),
+	('优酷齿轮制造厂', '浙江'),
+	('腾讯液压制造厂', '新疆'),
+	('阿里电机制造厂', '内蒙古'),
+	('网易显示屏制造厂', '河北');
+
+
+--所需零件信息
+CREATE TABLE component_info
+(
+	Component_id int identity(1001,1) NOT NULL PRIMARY KEY,
+	Component_name VARCHAR(20) not NULL,
+)
+
+INSERT INTO component_info
+	(Component_name)
+VALUES
+	('发电机'),
+	('风机叶片'),
+	('齿轮箱'),
+	('液压装置'),
+	('显示屏');
+
+--向供应商的订单管理
+CREATE TABLE order_list
+(
+	sernum bigint identity(10001,1) not NULL PRIMARY KEY,
+	--FOREIGN KEY REFERENCES supplier_info(Supplier_id) 
+	Supplier_id bigint not NULL ,
+	-- FOREIGN KEY REFERENCES component_info(Component_id) 
+	Component_id int NOT NULL,
+	Order_num int NOT NULL DEFAULT 2
+)
+
+INSERT INTO order_list
+	(Supplier_id,Component_id,Order_num)
+VALUES
+	(3018071001,1001,5),
+	(3018071002,1002,2),
+	(3018071003,1003,3),
+	(3018071004,1004,2),
+	(3018071005,1001,1),
+	(3018071006,1005,5);
+
+--仪表设备
+CREATE TABLE config
+(
+	Meter_id bigint identity(2018071001,1) not NULL PRIMARY KEY,
+	Meter_type VARCHAR(30) not null,
+	--仪表安装位置 0:  1:  2: 
+	Meter_addr int not NULL DEFAULT 0,
+	--仪表是否正常 默认为1 正常
+	Meter_malfunc int not null DEFAULT 1
+)
+
+insert INTO config
+	(Meter_type,Meter_addr,Meter_malfunc)
+VALUES
+	('叶片监测仪表', 0, 1),
+	('齿轮箱监测仪表', 0, 1),
+	('发电机监测仪表', 1, 1),
+	('液压监测仪表', 1, 1),
+	('叶片监测仪表', 2, 1),
+	('发电机监测仪表', 2, 1);
+
+--机器状况,由相应风机每隔一定时间自动填入
+--打算运作管理中使用
+CREATE TABLE machine_data
+(
+	Data_id bigint identity(4018071001,1) not NULL PRIMARY KEY,
+	数据载入时间 date,
+	叶轮直径 float,
+	功率 float,--单位 kw
+	额定风速 float,
+	扫风面积 float,
+	抗最大风速 float,
+	切入风速 float
+)
+
+insert into machine_data
+(数据载入时间,叶轮直径,功率,额定风速,扫风面积,抗最大风速,切入风速)
+VALUES
+('2018-03-15',43.2,600,14,1466,70,3),
+('2018-03-16',44,600,12,1500,70,3),
+('2018-03-17',43.8,600,17.5,1563,70,3.2),
+('2018-03-15',56.3,900,15,2056.5,63,2.9),
+('2018-03-15',58.3,900,15,2286,64.3,3),
+('2018-03-17',62,1200,12,3019,59.5,3),
+('2018-03-18',60,1200,12,3009,60,3.1);
