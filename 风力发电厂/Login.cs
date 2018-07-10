@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
 
 namespace 风力发电厂
 {
@@ -24,10 +25,53 @@ namespace 风力发电厂
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Form form = new FormMain();
-            form.Show();
-            this.Hide();
+            string uname = textBox1.Text.ToString();
+            string pwd = textBox2.Text.ToString();
+            string limit = "";
+            if (uname.Equals("") && pwd.Equals(""))
+            {
+                MessageBox.Show("账号密码不能为空！");
+            }
+            else if (uname.Equals(""))
+            {
+                MessageBox.Show("账号不能为空！");
+            }
+            else if (pwd.Equals(""))
+            {
+                MessageBox.Show("密码不能为空！");
+            }
+            else
+            {
+                switch (comboBox1.SelectedItem.ToString().Trim())
+                {
+                    case "普通员工":
+                        limit = "0";
+                        break;
+                    case "高级工程师":
+                        limit = "1";
+                        break;
+                    case "系统管理员":
+                        limit = "2";
+                        break;
+                    default:
+                        MessageBox.Show("身份选择异常！");
+                        break;
+                }
+                if (!limit.Equals(""))
+                {
+                    if(UserHelp.User_Login(uname, pwd, limit))
+                    {
+                        Form form = new FormMain();
+                        form.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("密码错误！");
+                    }
+                }
+            }
+            
         }
     }
 }

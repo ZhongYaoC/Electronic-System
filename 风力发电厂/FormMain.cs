@@ -24,12 +24,18 @@ namespace 风力发电厂
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void 供应商管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
