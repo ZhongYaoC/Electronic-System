@@ -20,13 +20,13 @@ namespace DAL
          用户登陆方法，检查用户名，密码，和身份
          密码正确返回 true 错误返回 false
              */
-        public static bool User_Login(string name, string pwd, string limit)
+        public static bool User_Login(string uid, string pwd, string limit)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("select * from user_info");
             stringBuilder.Append(" where ");
-            stringBuilder.Append("User_name='");
-            stringBuilder.Append(name);
+            stringBuilder.Append("User_id='");
+            stringBuilder.Append(uid);
             stringBuilder.Append("' and User_pwd=");
             stringBuilder.Append(pwd);
             stringBuilder.Append(" and User_limit=");

@@ -25,14 +25,14 @@ namespace 风力发电厂
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string uname = textBox1.Text.ToString();
+            string uid = textBox1.Text.ToString();
             string pwd = textBox2.Text.ToString();
             string limit = "";
-            if (uname.Equals("") && pwd.Equals(""))
+            if (uid.Equals("") && pwd.Equals(""))
             {
                 MessageBox.Show("账号密码不能为空！");
             }
-            else if (uname.Equals(""))
+            else if (uid.Equals(""))
             {
                 MessageBox.Show("账号不能为空！");
             }
@@ -59,8 +59,9 @@ namespace 风力发电厂
                 }
                 if (!limit.Equals(""))
                 {
-                    if(UserHelp.User_Login(uname, pwd, limit))
+                    if(UserHelp.User_Login(uid, pwd, limit))
                     {
+
                         Form form = new FormMain();
                         form.Show();
                         this.Hide();
