@@ -26,5 +26,10 @@ namespace 风力发电厂
         {
             this.Close();
         }
+
+        private void 供应商管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

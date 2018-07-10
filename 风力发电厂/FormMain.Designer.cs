@@ -30,21 +30,21 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.基础信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.运作灌录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.风机状态监控ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.风机出力情况ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.人员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.供应商管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.技术资料录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.运作灌录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.风机状态监控ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.风机出力情况ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.维护活动管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.维护需求ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.维修计划ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.维修实施ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.维修报告ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统日志管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设备管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.备件管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.船舶管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统日志管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,25 @@
             this.基础信息管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
             this.基础信息管理ToolStripMenuItem.Text = "基础信息管理";
             // 
+            // 人员管理ToolStripMenuItem
+            // 
+            this.人员管理ToolStripMenuItem.Name = "人员管理ToolStripMenuItem";
+            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.人员管理ToolStripMenuItem.Text = "人员管理";
+            // 
+            // 供应商管理ToolStripMenuItem
+            // 
+            this.供应商管理ToolStripMenuItem.Name = "供应商管理ToolStripMenuItem";
+            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.供应商管理ToolStripMenuItem.Text = "供应商管理";
+            this.供应商管理ToolStripMenuItem.Click += new System.EventHandler(this.供应商管理ToolStripMenuItem_Click);
+            // 
+            // 技术资料录入ToolStripMenuItem
+            // 
+            this.技术资料录入ToolStripMenuItem.Name = "技术资料录入ToolStripMenuItem";
+            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.技术资料录入ToolStripMenuItem.Text = "技术资料录入";
+            // 
             // 运作灌录ToolStripMenuItem
             // 
             this.运作灌录ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -95,24 +114,6 @@
             this.风机出力情况ToolStripMenuItem.Name = "风机出力情况ToolStripMenuItem";
             this.风机出力情况ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.风机出力情况ToolStripMenuItem.Text = "风机出力情况";
-            // 
-            // 人员管理ToolStripMenuItem
-            // 
-            this.人员管理ToolStripMenuItem.Name = "人员管理ToolStripMenuItem";
-            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.人员管理ToolStripMenuItem.Text = "人员管理";
-            // 
-            // 供应商管理ToolStripMenuItem
-            // 
-            this.供应商管理ToolStripMenuItem.Name = "供应商管理ToolStripMenuItem";
-            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.供应商管理ToolStripMenuItem.Text = "供应商管理";
-            // 
-            // 技术资料录入ToolStripMenuItem
-            // 
-            this.技术资料录入ToolStripMenuItem.Name = "技术资料录入ToolStripMenuItem";
-            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.技术资料录入ToolStripMenuItem.Text = "技术资料录入";
             // 
             // 维护活动管理ToolStripMenuItem
             // 
@@ -149,12 +150,6 @@
             this.维修报告ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.维修报告ToolStripMenuItem.Text = "维修报告";
             // 
-            // 系统日志管理ToolStripMenuItem
-            // 
-            this.系统日志管理ToolStripMenuItem.Name = "系统日志管理ToolStripMenuItem";
-            this.系统日志管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.系统日志管理ToolStripMenuItem.Text = "系统日志管理";
-            // 
             // 设备管理ToolStripMenuItem
             // 
             this.设备管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -175,6 +170,12 @@
             this.船舶管理ToolStripMenuItem.Name = "船舶管理ToolStripMenuItem";
             this.船舶管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.船舶管理ToolStripMenuItem.Text = "船舶管理";
+            // 
+            // 系统日志管理ToolStripMenuItem
+            // 
+            this.系统日志管理ToolStripMenuItem.Name = "系统日志管理ToolStripMenuItem";
+            this.系统日志管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.系统日志管理ToolStripMenuItem.Text = "系统日志管理";
             // 
             // 退出ToolStripMenuItem
             // 
