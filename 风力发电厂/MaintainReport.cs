@@ -62,5 +62,15 @@ namespace 风力发电厂
         {
 
         }
+
+        private void lightningChartUltimate1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }

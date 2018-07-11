@@ -35,8 +35,18 @@
     <Reference Include="AlphaBlendTextBox">
       <HintPath>..\..\TpTextBox\AlphaBlendTextBox.dll</HintPath>
     </Reference>
+    <Reference Include="Arction.DirectX, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3" />
+    <Reference Include="Arction.Licensing, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3" />
+    <Reference Include="Arction.RenderingDefinitions, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3" />
+    <Reference Include="Arction.RenderingEngine, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3" />
+    <Reference Include="Arction.RenderingEngine11, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3" />
+    <Reference Include="Arction.RenderingEngine9, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3" />
+    <Reference Include="Arction.WinForms.Charting.LightningChartUltimate, Version=8.3.1.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,8 +94,20 @@
     <Compile Include="MaintainRequire.Designer.cs">
       <DependentUpon>MaintainRequire.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderManage.Designer.cs">
+      <DependentUpon>OrderManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupplierManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierManage.Designer.cs">
+      <DependentUpon>SupplierManage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +126,9 @@
     <EmbeddedResource Include="MaintainRequire.resx">
       <DependentUpon>MaintainRequire.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderManage.resx">
+      <DependentUpon>OrderManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -113,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SupplierManage.resx">
+      <DependentUpon>SupplierManage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
