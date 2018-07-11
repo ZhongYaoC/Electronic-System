@@ -39,7 +39,39 @@ namespace 风力发电厂
 
         private void 维修计划ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form form = new MaintainPlan();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void 维护需求ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new MaintainRequire();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void 维修实施ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new MaintainPerform();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void 维修报告ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new MaintainReport();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }

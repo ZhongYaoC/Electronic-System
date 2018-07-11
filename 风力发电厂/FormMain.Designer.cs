@@ -61,9 +61,10 @@
             this.退出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(809, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // 基础信息管理ToolStripMenuItem
             // 
@@ -78,20 +79,20 @@
             // 人员管理ToolStripMenuItem
             // 
             this.人员管理ToolStripMenuItem.Name = "人员管理ToolStripMenuItem";
-            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.人员管理ToolStripMenuItem.Text = "人员管理";
             // 
             // 供应商管理ToolStripMenuItem
             // 
             this.供应商管理ToolStripMenuItem.Name = "供应商管理ToolStripMenuItem";
-            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.供应商管理ToolStripMenuItem.Text = "供应商管理";
             this.供应商管理ToolStripMenuItem.Click += new System.EventHandler(this.供应商管理ToolStripMenuItem_Click);
             // 
             // 技术资料录入ToolStripMenuItem
             // 
             this.技术资料录入ToolStripMenuItem.Name = "技术资料录入ToolStripMenuItem";
-            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.技术资料录入ToolStripMenuItem.Text = "技术资料录入";
             // 
             // 运作灌录ToolStripMenuItem
@@ -107,13 +108,13 @@
             // 风机状态监控ToolStripMenuItem
             // 
             this.风机状态监控ToolStripMenuItem.Name = "风机状态监控ToolStripMenuItem";
-            this.风机状态监控ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.风机状态监控ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.风机状态监控ToolStripMenuItem.Text = "风机状态监控";
             // 
             // 风机出力情况ToolStripMenuItem
             // 
             this.风机出力情况ToolStripMenuItem.Name = "风机出力情况ToolStripMenuItem";
-            this.风机出力情况ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.风机出力情况ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.风机出力情况ToolStripMenuItem.Text = "风机出力情况";
             // 
             // 维护活动管理ToolStripMenuItem
@@ -132,6 +133,7 @@
             this.维护需求ToolStripMenuItem.Name = "维护需求ToolStripMenuItem";
             this.维护需求ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.维护需求ToolStripMenuItem.Text = "维护需求";
+            this.维护需求ToolStripMenuItem.Click += new System.EventHandler(this.维护需求ToolStripMenuItem_Click);
             // 
             // 维修计划ToolStripMenuItem
             // 
@@ -145,12 +147,14 @@
             this.维修实施ToolStripMenuItem.Name = "维修实施ToolStripMenuItem";
             this.维修实施ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.维修实施ToolStripMenuItem.Text = "维护实施";
+            this.维修实施ToolStripMenuItem.Click += new System.EventHandler(this.维修实施ToolStripMenuItem_Click);
             // 
             // 维修报告ToolStripMenuItem
             // 
             this.维修报告ToolStripMenuItem.Name = "维修报告ToolStripMenuItem";
             this.维修报告ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.维修报告ToolStripMenuItem.Text = "维护报告";
+            this.维修报告ToolStripMenuItem.Click += new System.EventHandler(this.维修报告ToolStripMenuItem_Click);
             // 
             // 设备管理ToolStripMenuItem
             // 
@@ -190,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(809, 518);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";

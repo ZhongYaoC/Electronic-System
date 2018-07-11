@@ -129,3 +129,95 @@ VALUES
 ('2018-03-15',58.3,900,15,2286,64.3,3),
 ('2018-03-17',62,1200,12,3019,59.5,3),
 ('2018-03-18',60,1200,12,3009,60,3.1);
+
+--3种mchine 1-600kw 2-900kw 3-1200kw
+ALTER Table machine_data
+ADD 切出风速 float,
+Machine_id bigint,
+输出电流 float,
+输出电压 float,
+当前环境温度 float;
+
+update machine_data 
+set 切出风速 = 25,
+Machine_id = 1,
+输出电流 = 1200,
+输出电压 = 620,
+当前环境温度 = 35
+where Data_id = 4018071001;
+
+update machine_data 
+set 切出风速 = 26,
+Machine_id = 1,
+输出电流 = 1190,
+输出电压 = 618,
+当前环境温度 = 40
+where Data_id = 4018071002;
+
+update machine_data 
+set 切出风速 = 27,
+Machine_id = 1,
+输出电流 = 1189,
+输出电压 = 630,
+当前环境温度 = 36
+where Data_id = 4018071003;
+
+update machine_data 
+set 切出风速 = 24.8,
+Machine_id = 2,
+输出电流 = 1380,
+输出电压 = 625,
+当前环境温度 = 36
+where Data_id = 4018071004;
+
+update machine_data 
+set 切出风速 = 23,
+Machine_id = 2,
+输出电流 = 1400,
+输出电压 = 619,
+当前环境温度 = 33
+where Data_id = 4018071005;
+
+update machine_data 
+set 切出风速 = 26,
+Machine_id = 3,
+输出电流 = 1500,
+输出电压 = 624,
+当前环境温度 = 40
+where Data_id = 4018071006;
+
+update machine_data 
+set 切出风速 = 23.9,
+Machine_id = 3,
+输出电流 = 1530,
+输出电压 = 630,
+当前环境温度 = 31
+where Data_id = 4018071007;
+
+
+-- IT will help me 2333
+--select DATEDIFF(DY,数据载入时间,convert(date,GETDATE(),23)) as 用时 from machine_data
+--select isnull(convert(varchar(50),DATEDIFF(DY,开始维护时间,convert(date,GETDATE(),23))),'未开工') as 已施工天数 from config where Meter_malfunc = 0
+
+ALTER Table config
+ADD 计划维护时长 int,
+开始维护时间 date,
+-- 0 : 不延期 1：延期维护 
+延期 int not null DEFAULT 0;
+
+--test data
+insert INTO config
+	(Meter_type,Meter_addr,Meter_malfunc)
+VALUES
+	('叶片监测仪表', 0, 0),
+	('齿轮箱监测仪表', 1, 0),
+	('发电机监测仪表', 2, 0),
+	('液压监测仪表', 1, 0);
+
+
+--这个约束名称可能有差异 -to 老王
+alter table config
+DROP constraint DF__config__延期__02084FDA
+
+alter table config
+drop column 延期
