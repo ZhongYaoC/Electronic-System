@@ -58,11 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Userinfoinsert.cs">
+    <Compile Include="Userinsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Userinfoinsert.Designer.cs">
-      <DependentUpon>Userinfoinsert.cs</DependentUpon>
+    <Compile Include="Userinsert.Designer.cs">
+      <DependentUpon>Userinsert.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -114,8 +114,8 @@
     <Compile Include="SupplierManage.Designer.cs">
       <DependentUpon>SupplierManage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Userinfoinsert.resx">
-      <DependentUpon>Userinfoinsert.cs</DependentUpon>
+    <EmbeddedResource Include="Userinsert.resx">
+      <DependentUpon>Userinsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

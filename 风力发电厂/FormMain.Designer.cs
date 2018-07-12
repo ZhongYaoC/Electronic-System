@@ -213,6 +213,7 @@
             this.用户信息录入ToolStripMenuItem.Name = "用户信息录入ToolStripMenuItem";
             this.用户信息录入ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.用户信息录入ToolStripMenuItem.Text = "用户信息录入";
+            this.用户信息录入ToolStripMenuItem.Click += new System.EventHandler(this.用户信息录入ToolStripMenuItem_Click);
             // 
             // 用户信息管理ToolStripMenuItem
             // 

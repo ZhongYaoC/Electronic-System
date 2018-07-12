@@ -44,5 +44,24 @@ namespace DAL
             }
         }
 
+        public static bool Insert_uinfo(string uname, string pwd)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("insert into user_info(User_name,User_pwd,User_limit) values('");
+            stringBuilder.Append(uname+"','");
+            stringBuilder.Append(pwd + "','");
+            stringBuilder.Append(0 + "')");
+            int rows = DBhelp.ExecuteNonQuery(stringBuilder.ToString());
+
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
