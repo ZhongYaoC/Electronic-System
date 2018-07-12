@@ -29,10 +29,7 @@ namespace 风力发电厂
 
         private void 供应商管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new SupplierManage();
-            this.IsMdiContainer = true;
-            form.MdiParent = this;
-            form.Show();
+
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -81,6 +78,14 @@ namespace 风力发电厂
         {
             Form form = new OrderManage();
             IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void 供应商信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new SupplierManage();
+            this.IsMdiContainer = true;
             form.MdiParent = this;
             form.Show();
         }
