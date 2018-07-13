@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompHelp.cs" />
     <Compile Include="DBhelp.cs" />
     <Compile Include="MaintainHelper.cs" />
     <Compile Include="Program.cs" />

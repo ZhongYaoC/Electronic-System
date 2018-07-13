@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component_manage.Designer.cs">
+      <DependentUpon>Component_manage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Userinsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="User_manage.Designer.cs">
       <DependentUpon>User_manage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Component_manage.resx">
+      <DependentUpon>Component_manage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Userinsert.resx">
       <DependentUpon>Userinsert.cs</DependentUpon>
     </EmbeddedResource>

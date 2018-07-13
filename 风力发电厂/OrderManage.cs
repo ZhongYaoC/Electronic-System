@@ -23,5 +23,10 @@ namespace 风力发电厂
         {
             dataGridView1.DataSource = SupplierHelp.GetOrder();
         }
+
+        private void OrderManage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

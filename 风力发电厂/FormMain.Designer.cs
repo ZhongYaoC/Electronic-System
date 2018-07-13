@@ -87,20 +87,20 @@
             this.用户信息录入ToolStripMenuItem,
             this.用户信息管理ToolStripMenuItem});
             this.人员管理ToolStripMenuItem.Name = "人员管理ToolStripMenuItem";
-            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.人员管理ToolStripMenuItem.Text = "人员管理";
             // 
             // 用户信息录入ToolStripMenuItem
             // 
             this.用户信息录入ToolStripMenuItem.Name = "用户信息录入ToolStripMenuItem";
-            this.用户信息录入ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户信息录入ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.用户信息录入ToolStripMenuItem.Text = "用户信息录入";
             this.用户信息录入ToolStripMenuItem.Click += new System.EventHandler(this.用户信息录入ToolStripMenuItem_Click);
             // 
             // 用户信息管理ToolStripMenuItem
             // 
             this.用户信息管理ToolStripMenuItem.Name = "用户信息管理ToolStripMenuItem";
-            this.用户信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户信息管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.用户信息管理ToolStripMenuItem.Text = "用户信息管理";
             this.用户信息管理ToolStripMenuItem.Click += new System.EventHandler(this.用户信息管理ToolStripMenuItem_Click);
             // 
@@ -110,7 +110,7 @@
             this.订单管理ToolStripMenuItem,
             this.供应商信息管理ToolStripMenuItem});
             this.供应商管理ToolStripMenuItem.Name = "供应商管理ToolStripMenuItem";
-            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.供应商管理ToolStripMenuItem.Text = "供应商管理";
             this.供应商管理ToolStripMenuItem.Click += new System.EventHandler(this.供应商管理ToolStripMenuItem_Click);
             // 
@@ -131,7 +131,7 @@
             // 技术资料录入ToolStripMenuItem
             // 
             this.技术资料录入ToolStripMenuItem.Name = "技术资料录入ToolStripMenuItem";
-            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.技术资料录入ToolStripMenuItem.Text = "技术资料录入";
             // 
             // 运作灌录ToolStripMenuItem
@@ -207,13 +207,14 @@
             // 备件管理ToolStripMenuItem
             // 
             this.备件管理ToolStripMenuItem.Name = "备件管理ToolStripMenuItem";
-            this.备件管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.备件管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.备件管理ToolStripMenuItem.Text = "备件管理";
+            this.备件管理ToolStripMenuItem.Click += new System.EventHandler(this.备件管理ToolStripMenuItem_Click);
             // 
             // 船舶管理ToolStripMenuItem
             // 
             this.船舶管理ToolStripMenuItem.Name = "船舶管理ToolStripMenuItem";
-            this.船舶管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.船舶管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.船舶管理ToolStripMenuItem.Text = "船舶管理";
             // 
             // 系统日志管理ToolStripMenuItem
