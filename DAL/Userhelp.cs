@@ -70,15 +70,15 @@ namespace DAL
         /*
          修改用户权限和密码
              */
-        public static bool Change_info(string uname, string pwd, string limit)
+        public static bool Change_info(string uid, string pwd, string limit)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("update user_info set ");
             stringBuilder.Append("User_pwd='");
             stringBuilder.Append(pwd+"', User_limit='");
             stringBuilder.Append(limit+"' ");
-            stringBuilder.Append("where User_name='");
-            stringBuilder.Append(uname+"'");
+            stringBuilder.Append("where User_id='");
+            stringBuilder.Append(uid+"'");
             int rows = DBhelp.ExecuteNonQuery(stringBuilder.ToString());
 
             if (rows > 0)
@@ -92,7 +92,27 @@ namespace DAL
         }
 
         /*
-         获取当前用户账号
+         删除用户信息
+             */
+        public static bool Delete_info(string uid)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("delete from user_info where User_id='");
+            stringBuilder.Append(uid+"'");
+            int rows = DBhelp.ExecuteNonQuery(stringBuilder.ToString());
+
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /*
+         获取用户账号
              */
         public static string Get_num(string uname, string pwd)
         {

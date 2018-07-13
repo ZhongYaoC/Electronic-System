@@ -14,6 +14,7 @@ namespace 风力发电厂
     public partial class User_manage : Form
     {
         string limit = "";
+        string uid = "";
         public User_manage()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace 风力发电厂
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            uid = Manage_view.Rows[e.RowIndex].Cells[0].Value.ToString();
             label2.Text = Manage_view.Rows[e.RowIndex].Cells[1].Value.ToString();
             pwd.Text = Manage_view.Rows[e.RowIndex].Cells[2].Value.ToString();
             limit = Manage_view.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -69,7 +71,6 @@ namespace 风力发电厂
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string uname = label2.Text.ToString();
             if(radioButton1.Checked == true)
             {
                 limit = "0";
@@ -83,7 +84,7 @@ namespace 风力发电厂
                 limit = "2";
             }
 
-            if (UserHelp.Change_info(uname, pwd.Text.ToString(), limit))
+            if (UserHelp.Change_info(uid, pwd.Text.ToString(), limit))
             {
                 MessageBox.Show("修改成功！");
                 Init_view();
@@ -91,6 +92,20 @@ namespace 风力发电厂
             else
             {
                 MessageBox.Show("修改失败！");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (UserHelp.Delete_info(uid))
+            {
+                MessageBox.Show("删除成功！");
+
+                Init_view();
+            }
+            else
+            {
+                MessageBox.Show("删除失败！");
             }
         }
     }
