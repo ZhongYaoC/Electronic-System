@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.repwd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.pwd.Location = new System.Drawing.Point(117, 84);
             this.pwd.Name = "pwd";
             this.pwd.Size = new System.Drawing.Size(123, 25);
-            this.pwd.TabIndex = 1;
+            this.pwd.TabIndex = 2;
             this.pwd.UseSystemPasswordChar = true;
             // 
             // label3
@@ -87,7 +87,7 @@
             this.repwd.Location = new System.Drawing.Point(117, 126);
             this.repwd.Name = "repwd";
             this.repwd.Size = new System.Drawing.Size(123, 25);
-            this.repwd.TabIndex = 1;
+            this.repwd.TabIndex = 3;
             this.repwd.UseSystemPasswordChar = true;
             // 
             // groupBox1
@@ -107,25 +107,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "用户信息录入";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(69, 198);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "录入";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(165, 198);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
+            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.TabIndex = 5;
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(69, 198);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "录入";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

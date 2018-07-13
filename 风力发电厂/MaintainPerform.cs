@@ -45,5 +45,10 @@ namespace 风力发电厂
         {
             textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

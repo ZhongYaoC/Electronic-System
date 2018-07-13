@@ -38,7 +38,7 @@ namespace 风力发电厂
                 {
                     if (UserHelp.Insert_uinfo(uname, passw))
                     {
-                        MessageBox.Show("录入成功！");
+                        MessageBox.Show("录入成功！您申请的账号为:"+UserHelp.Get_num(uname, passw));
                         this.Close();
                     }
                     else

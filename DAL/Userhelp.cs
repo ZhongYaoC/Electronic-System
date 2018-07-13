@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace DAL
 {
@@ -44,6 +45,9 @@ namespace DAL
             }
         }
 
+        /*
+         用户信息录入
+             */
         public static bool Insert_uinfo(string uname, string pwd)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -63,5 +67,61 @@ namespace DAL
             }
         }
 
+        /*
+         修改用户权限和密码
+             */
+        public static bool Change_info(string uname, string pwd, string limit)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("update user_info set ");
+            stringBuilder.Append("User_pwd='");
+            stringBuilder.Append(pwd+"', User_limit='");
+            stringBuilder.Append(limit+"' ");
+            stringBuilder.Append("where User_name='");
+            stringBuilder.Append(uname+"'");
+            int rows = DBhelp.ExecuteNonQuery(stringBuilder.ToString());
+
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /*
+         获取当前用户账号
+             */
+        public static string Get_num(string uname, string pwd)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("select * from user_info");
+            stringBuilder.Append(" where ");
+            stringBuilder.Append("User_name='");
+            stringBuilder.Append(uname);
+            stringBuilder.Append("' and User_pwd=");
+            stringBuilder.Append(pwd);
+            SqlDataReader sqlDataReader = DBhelp.ExecuteReader(stringBuilder.ToString());
+            if (sqlDataReader.Read())
+            {
+                string num = sqlDataReader[0].ToString();
+                sqlDataReader.Close();
+                return num;
+            }
+            else
+            {
+                sqlDataReader.Close();
+                return null;
+            }
+        }
+
+        public static DataTable Get_userable()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("select * from user_info");
+            return DBhelp.GetDataTable(stringBuilder.ToString());
+        }
     }
 }

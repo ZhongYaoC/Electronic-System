@@ -61,7 +61,7 @@ namespace 风力发电厂
                 {
                     if(UserHelp.User_Login(uid, pwd, limit))
                     {
-
+                        UserHelp.Set_uid(uid);
                         Form form = new FormMain();
                         form.Show();
                         this.Hide();
@@ -77,6 +77,8 @@ namespace 风力发电厂
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Form form = new Form1();
+            form.Show();
 
         }
     }

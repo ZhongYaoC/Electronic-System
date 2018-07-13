@@ -97,5 +97,13 @@ namespace 风力发电厂
             form.MdiParent = this;
             form.Show();
         }
+
+        private void 用户信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new User_manage();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

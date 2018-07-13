@@ -31,8 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.基础信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.人员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户信息录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.供应商管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.订单管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.供应商信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.技术资料录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.运作灌录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.风机状态监控ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,9 +50,6 @@
             this.船舶管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统日志管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.用户信息录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.用户信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.供应商信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +90,20 @@
             this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.人员管理ToolStripMenuItem.Text = "人员管理";
             // 
+            // 用户信息录入ToolStripMenuItem
+            // 
+            this.用户信息录入ToolStripMenuItem.Name = "用户信息录入ToolStripMenuItem";
+            this.用户信息录入ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户信息录入ToolStripMenuItem.Text = "用户信息录入";
+            this.用户信息录入ToolStripMenuItem.Click += new System.EventHandler(this.用户信息录入ToolStripMenuItem_Click);
+            // 
+            // 用户信息管理ToolStripMenuItem
+            // 
+            this.用户信息管理ToolStripMenuItem.Name = "用户信息管理ToolStripMenuItem";
+            this.用户信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户信息管理ToolStripMenuItem.Text = "用户信息管理";
+            this.用户信息管理ToolStripMenuItem.Click += new System.EventHandler(this.用户信息管理ToolStripMenuItem_Click);
+            // 
             // 供应商管理ToolStripMenuItem
             // 
             this.供应商管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,9 +117,16 @@
             // 订单管理ToolStripMenuItem
             // 
             this.订单管理ToolStripMenuItem.Name = "订单管理ToolStripMenuItem";
-            this.订单管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.订单管理ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
             this.订单管理ToolStripMenuItem.Text = "订单管理";
             this.订单管理ToolStripMenuItem.Click += new System.EventHandler(this.订单管理ToolStripMenuItem_Click);
+            // 
+            // 供应商信息管理ToolStripMenuItem
+            // 
+            this.供应商信息管理ToolStripMenuItem.Name = "供应商信息管理ToolStripMenuItem";
+            this.供应商信息管理ToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.供应商信息管理ToolStripMenuItem.Text = "供应商信息管理";
+            this.供应商信息管理ToolStripMenuItem.Click += new System.EventHandler(this.供应商信息管理ToolStripMenuItem_Click);
             // 
             // 技术资料录入ToolStripMenuItem
             // 
@@ -208,26 +229,6 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // 用户信息录入ToolStripMenuItem
-            // 
-            this.用户信息录入ToolStripMenuItem.Name = "用户信息录入ToolStripMenuItem";
-            this.用户信息录入ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.用户信息录入ToolStripMenuItem.Text = "用户信息录入";
-            this.用户信息录入ToolStripMenuItem.Click += new System.EventHandler(this.用户信息录入ToolStripMenuItem_Click);
-            // 
-            // 用户信息管理ToolStripMenuItem
-            // 
-            this.用户信息管理ToolStripMenuItem.Name = "用户信息管理ToolStripMenuItem";
-            this.用户信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.用户信息管理ToolStripMenuItem.Text = "用户信息管理";
-            // 
-            // 供应商信息管理ToolStripMenuItem
-            // 
-            this.供应商信息管理ToolStripMenuItem.Name = "供应商信息管理ToolStripMenuItem";
-            this.供应商信息管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.供应商信息管理ToolStripMenuItem.Text = "供应商信息管理";
-            this.供应商信息管理ToolStripMenuItem.Click += new System.EventHandler(this.供应商信息管理ToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -235,7 +236,7 @@
             this.ClientSize = new System.Drawing.Size(1079, 648);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormMain_Load);
