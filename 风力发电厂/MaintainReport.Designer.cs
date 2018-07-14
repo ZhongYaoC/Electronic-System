@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaintainReport));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.alphaBlendTextBox1 = new ZBobb.AlphaBlendTextBox();
             this.account = new ZBobb.AlphaBlendTextBox();
@@ -37,7 +36,11 @@
             this.error = new ZBobb.AlphaBlendTextBox();
             this.fixing = new ZBobb.AlphaBlendTextBox();
             this.percent = new ZBobb.AlphaBlendTextBox();
-            this.lightningChartUltimate1 = new Arction.WinForms.Charting.LightningChartUltimate();
+            this.electronicSystemDataSet = new 风力发电厂.ElectronicSystemDataSet();
+            this.machinedataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.machine_dataTableAdapter = new 风力发电厂.ElectronicSystemDataSetTableAdapters.machine_dataTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.electronicSystemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.machinedataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -114,33 +117,25 @@
             this.percent.Size = new System.Drawing.Size(100, 14);
             this.percent.TabIndex = 6;
             // 
-            // lightningChartUltimate1
+            // electronicSystemDataSet
             // 
-            this.lightningChartUltimate1.BackColor = System.Drawing.Color.Gray;
-            this.lightningChartUltimate1.Background = ((Arction.WinForms.Charting.Fill)(resources.GetObject("lightningChartUltimate1.Background")));
-            this.lightningChartUltimate1.ChartManager = null;
-            this.lightningChartUltimate1.Location = new System.Drawing.Point(418, 87);
-            this.lightningChartUltimate1.MinimumSize = new System.Drawing.Size(110, 90);
-            this.lightningChartUltimate1.Name = "lightningChartUltimate1";
-            this.lightningChartUltimate1.Options = ((Arction.WinForms.Charting.ChartOptions)(resources.GetObject("lightningChartUltimate1.Options")));
-            this.lightningChartUltimate1.OutputStream = null;
-            this.lightningChartUltimate1.RenderOptions = ((Arction.WinForms.Charting.Views.RenderOptionsCommon)(resources.GetObject("lightningChartUltimate1.RenderOptions")));
-            this.lightningChartUltimate1.Size = new System.Drawing.Size(338, 219);
-            this.lightningChartUltimate1.TabIndex = 7;
-            this.lightningChartUltimate1.Title = ((Arction.WinForms.Charting.Titles.ChartTitle)(resources.GetObject("lightningChartUltimate1.Title")));
-            this.lightningChartUltimate1.View3D = ((Arction.WinForms.Charting.Views.View3D.View3D)(resources.GetObject("lightningChartUltimate1.View3D")));
-            this.lightningChartUltimate1.ViewPie3D = ((Arction.WinForms.Charting.Views.ViewPie3D.ViewPie3D)(resources.GetObject("lightningChartUltimate1.ViewPie3D")));
-            this.lightningChartUltimate1.ViewPolar = ((Arction.WinForms.Charting.Views.ViewPolar.ViewPolar)(resources.GetObject("lightningChartUltimate1.ViewPolar")));
-            this.lightningChartUltimate1.ViewSmith = ((Arction.WinForms.Charting.Views.ViewSmith.ViewSmith)(resources.GetObject("lightningChartUltimate1.ViewSmith")));
-            this.lightningChartUltimate1.ViewXY = ((Arction.WinForms.Charting.Views.ViewXY.ViewXY)(resources.GetObject("lightningChartUltimate1.ViewXY")));
-            this.lightningChartUltimate1.Load += new System.EventHandler(this.lightningChartUltimate1_Load);
+            this.electronicSystemDataSet.DataSetName = "ElectronicSystemDataSet";
+            this.electronicSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // machinedataBindingSource
+            // 
+            this.machinedataBindingSource.DataMember = "machine_data";
+            this.machinedataBindingSource.DataSource = this.electronicSystemDataSet;
+            // 
+            // machine_dataTableAdapter
+            // 
+            this.machine_dataTableAdapter.ClearBeforeFill = true;
             // 
             // MaintainReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lightningChartUltimate1);
             this.Controls.Add(this.percent);
             this.Controls.Add(this.fixing);
             this.Controls.Add(this.error);
@@ -149,6 +144,9 @@
             this.Controls.Add(this.alphaBlendTextBox1);
             this.Name = "MaintainReport";
             this.Text = "MaintainReport";
+            this.Load += new System.EventHandler(this.MaintainReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.electronicSystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.machinedataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +160,8 @@
         private ZBobb.AlphaBlendTextBox error;
         private ZBobb.AlphaBlendTextBox fixing;
         private ZBobb.AlphaBlendTextBox percent;
-        private Arction.WinForms.Charting.LightningChartUltimate lightningChartUltimate1;
+        private ElectronicSystemDataSet electronicSystemDataSet;
+        private System.Windows.Forms.BindingSource machinedataBindingSource;
+        private ElectronicSystemDataSetTableAdapters.machine_dataTableAdapter machine_dataTableAdapter;
     }
 }

@@ -20,6 +20,7 @@ namespace 风力发电厂
             Init_gridview();
         }
 
+        
         private void Init_gridview()
         {
             SqlDataReader normr = DBhelp.ExecuteReader("select count(*) from config where Meter_malfunc=1");
@@ -70,6 +71,13 @@ namespace 风力发电厂
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+
+        }
+
+        private void MaintainReport_Load(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“electronicSystemDataSet.machine_data”中。您可以根据需要移动或删除它。
+            this.machine_dataTableAdapter.Fill(this.electronicSystemDataSet.machine_data);
 
         }
     }

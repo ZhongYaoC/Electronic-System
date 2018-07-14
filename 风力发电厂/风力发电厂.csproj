@@ -64,6 +64,11 @@
     <Compile Include="Component_manage.Designer.cs">
       <DependentUpon>Component_manage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElectronicSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Userinsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +173,17 @@
     <EmbeddedResource Include="user_manage.resx">
       <DependentUpon>User_manage.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ElectronicSystemDataSet.xsc">
+      <DependentUpon>ElectronicSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ElectronicSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElectronicSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElectronicSystemDataSet.xss">
+      <DependentUpon>ElectronicSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
