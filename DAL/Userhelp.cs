@@ -91,6 +91,26 @@ namespace DAL
             }
         }
 
+        public static bool Change_pwd(string uid, string pwd)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("update user_info set ");
+            stringBuilder.Append("User_pwd='");
+            stringBuilder.Append(pwd + "' ");
+            stringBuilder.Append("where User_id='");
+            stringBuilder.Append(uid + "'");
+            int rows = DBhelp.ExecuteNonQuery(stringBuilder.ToString());
+
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         /*
          删除用户信息
              */

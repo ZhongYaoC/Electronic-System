@@ -62,7 +62,7 @@ namespace 风力发电厂
                     if(UserHelp.User_Login(uid, pwd, limit))
                     {
                         UserHelp.Set_uid(uid);
-                        Form form = new FormMain();
+                        Form form = new FormMain(limit);
                         form.Show();
                         this.Hide();
                     }
@@ -79,6 +79,11 @@ namespace 风力发电厂
         {
             Form form = new Form1();
             form.Show();
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -47,9 +47,9 @@
             this.维修报告ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设备管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.备件管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.船舶管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统日志管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.密码修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.密码修改ToolStripMenuItem,
             this.基础信息管理ToolStripMenuItem,
             this.运作灌录ToolStripMenuItem,
             this.维护活动管理ToolStripMenuItem,
@@ -147,14 +148,16 @@
             // 风机状态监控ToolStripMenuItem
             // 
             this.风机状态监控ToolStripMenuItem.Name = "风机状态监控ToolStripMenuItem";
-            this.风机状态监控ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.风机状态监控ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.风机状态监控ToolStripMenuItem.Text = "风机状态监控";
+            this.风机状态监控ToolStripMenuItem.Click += new System.EventHandler(this.风机状态监控ToolStripMenuItem_Click);
             // 
             // 风机出力情况ToolStripMenuItem
             // 
             this.风机出力情况ToolStripMenuItem.Name = "风机出力情况ToolStripMenuItem";
-            this.风机出力情况ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.风机出力情况ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.风机出力情况ToolStripMenuItem.Text = "风机出力情况";
+            this.风机出力情况ToolStripMenuItem.Click += new System.EventHandler(this.风机出力情况ToolStripMenuItem_Click);
             // 
             // 维护活动管理ToolStripMenuItem
             // 
@@ -170,36 +173,35 @@
             // 维护需求ToolStripMenuItem
             // 
             this.维护需求ToolStripMenuItem.Name = "维护需求ToolStripMenuItem";
-            this.维护需求ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.维护需求ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.维护需求ToolStripMenuItem.Text = "维护需求";
             this.维护需求ToolStripMenuItem.Click += new System.EventHandler(this.维护需求ToolStripMenuItem_Click);
             // 
             // 维修计划ToolStripMenuItem
             // 
             this.维修计划ToolStripMenuItem.Name = "维修计划ToolStripMenuItem";
-            this.维修计划ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.维修计划ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.维修计划ToolStripMenuItem.Text = "维护计划";
             this.维修计划ToolStripMenuItem.Click += new System.EventHandler(this.维修计划ToolStripMenuItem_Click);
             // 
             // 维修实施ToolStripMenuItem
             // 
             this.维修实施ToolStripMenuItem.Name = "维修实施ToolStripMenuItem";
-            this.维修实施ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.维修实施ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.维修实施ToolStripMenuItem.Text = "维护实施";
             this.维修实施ToolStripMenuItem.Click += new System.EventHandler(this.维修实施ToolStripMenuItem_Click);
             // 
             // 维修报告ToolStripMenuItem
             // 
             this.维修报告ToolStripMenuItem.Name = "维修报告ToolStripMenuItem";
-            this.维修报告ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.维修报告ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.维修报告ToolStripMenuItem.Text = "维护报告";
             this.维修报告ToolStripMenuItem.Click += new System.EventHandler(this.维修报告ToolStripMenuItem_Click);
             // 
             // 设备管理ToolStripMenuItem
             // 
             this.设备管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.备件管理ToolStripMenuItem,
-            this.船舶管理ToolStripMenuItem});
+            this.备件管理ToolStripMenuItem});
             this.设备管理ToolStripMenuItem.Name = "设备管理ToolStripMenuItem";
             this.设备管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.设备管理ToolStripMenuItem.Text = "设备管理";
@@ -210,12 +212,6 @@
             this.备件管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.备件管理ToolStripMenuItem.Text = "备件管理";
             this.备件管理ToolStripMenuItem.Click += new System.EventHandler(this.备件管理ToolStripMenuItem_Click);
-            // 
-            // 船舶管理ToolStripMenuItem
-            // 
-            this.船舶管理ToolStripMenuItem.Name = "船舶管理ToolStripMenuItem";
-            this.船舶管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.船舶管理ToolStripMenuItem.Text = "船舶管理";
             // 
             // 系统日志管理ToolStripMenuItem
             // 
@@ -229,6 +225,13 @@
             this.退出ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            // 
+            // 密码修改ToolStripMenuItem
+            // 
+            this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
+            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.密码修改ToolStripMenuItem.Text = "密码修改";
+            this.密码修改ToolStripMenuItem.Click += new System.EventHandler(this.密码修改ToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -265,13 +268,13 @@
         private System.Windows.Forms.ToolStripMenuItem 维修报告ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 设备管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 备件管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 船舶管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统日志管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 订单管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 用户信息录入ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 用户信息管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 供应商信息管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 密码修改ToolStripMenuItem;
     }
 }
 
