@@ -32,6 +32,7 @@ namespace 风力发电厂
             SqlDataReader gg = DBhelp.ExecuteReader("select top(5) sernum,Order_num from order_list order by sernum desc");
             chart1.DataBindTable(gg, "sernum");
             gg.Close();
+            
         }
 
         private void OrderManage_Load(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace 风力发电厂
                     str = ct.Text + str;
                 }
             }
-            return str;
+            return str.Replace("\r\n","");
         }
 
         //获取被选中的零部件
@@ -114,7 +115,6 @@ namespace 风力发电厂
                 ComName4 = Comstr[3];
                 ComName5 = Comstr[4];
             }
-        
             try
             {
                 OrderHelp.addOrder(orderNum,supName,ComName1, ComName2, ComName3, ComName4, ComName5);
@@ -127,6 +127,7 @@ namespace 风力发电厂
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
     }
 }
