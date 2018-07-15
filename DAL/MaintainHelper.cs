@@ -22,7 +22,7 @@ namespace DAL
         public static DataTable GetPlan()
         {
             StringBuilder querystr = new StringBuilder();
-            querystr.Append("select Meter_id as 维护机器ID, isnull(convert(varchar(50),计划维护时长),'故障还未申报'),isnull(convert(varchar(50),开始维护时间),' ') from config where Meter_malfunc = 0");
+            querystr.Append("select Meter_id as 维护机器ID, isnull(convert(varchar(50),计划维护时长),'故障还未申报') as 计划维护时长,isnull(convert(varchar(50),开始维护时间),' ') as 开始维护时间 from config where Meter_malfunc = 0");
             DataTable dt = DBhelp.GetDataTable(querystr.ToString());
             return dt;
         }

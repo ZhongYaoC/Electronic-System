@@ -45,6 +45,7 @@
     <Compile Include="CompHelp.cs" />
     <Compile Include="DBhelp.cs" />
     <Compile Include="MaintainHelper.cs" />
+    <Compile Include="OrderHelp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupplierHelp.cs" />
