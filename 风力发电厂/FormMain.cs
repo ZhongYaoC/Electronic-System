@@ -146,12 +146,18 @@ namespace 风力发电厂
 
         private void 风机状态监控ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form form = new Fan_state();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void 风机出力情况ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form form = new Fan_output();
+            this.IsMdiContainer = true;
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void 密码修改ToolStripMenuItem_Click(object sender, EventArgs e)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.密码修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.基础信息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.人员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户信息录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.备件管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统日志管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.密码修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,10 +67,17 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1079, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1192, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // 密码修改ToolStripMenuItem
+            // 
+            this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
+            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.密码修改ToolStripMenuItem.Text = "密码修改";
+            this.密码修改ToolStripMenuItem.Click += new System.EventHandler(this.密码修改ToolStripMenuItem_Click);
             // 
             // 基础信息管理ToolStripMenuItem
             // 
@@ -88,7 +95,7 @@
             this.用户信息录入ToolStripMenuItem,
             this.用户信息管理ToolStripMenuItem});
             this.人员管理ToolStripMenuItem.Name = "人员管理ToolStripMenuItem";
-            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.人员管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.人员管理ToolStripMenuItem.Text = "人员管理";
             // 
             // 用户信息录入ToolStripMenuItem
@@ -111,7 +118,7 @@
             this.订单管理ToolStripMenuItem,
             this.供应商信息管理ToolStripMenuItem});
             this.供应商管理ToolStripMenuItem.Name = "供应商管理ToolStripMenuItem";
-            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.供应商管理ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.供应商管理ToolStripMenuItem.Text = "供应商管理";
             this.供应商管理ToolStripMenuItem.Click += new System.EventHandler(this.供应商管理ToolStripMenuItem_Click);
             // 
@@ -132,7 +139,7 @@
             // 技术资料录入ToolStripMenuItem
             // 
             this.技术资料录入ToolStripMenuItem.Name = "技术资料录入ToolStripMenuItem";
-            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.技术资料录入ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.技术资料录入ToolStripMenuItem.Text = "技术资料录入";
             // 
             // 运作灌录ToolStripMenuItem
@@ -226,18 +233,11 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // 密码修改ToolStripMenuItem
-            // 
-            this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
-            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.密码修改ToolStripMenuItem.Text = "密码修改";
-            this.密码修改ToolStripMenuItem.Click += new System.EventHandler(this.密码修改ToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 648);
+            this.ClientSize = new System.Drawing.Size(1192, 715);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);

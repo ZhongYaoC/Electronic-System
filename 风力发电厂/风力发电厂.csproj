@@ -75,6 +75,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ElectronicSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Fan_output.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fan_output.Designer.cs">
+      <DependentUpon>Fan_output.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fan_state.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fan_state.Designer.cs">
+      <DependentUpon>Fan_state.cs</DependentUpon>
+    </Compile>
     <Compile Include="Userinsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component_manage.resx">
       <DependentUpon>Component_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fan_output.resx">
+      <DependentUpon>Fan_output.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fan_state.resx">
+      <DependentUpon>Fan_state.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Userinsert.resx">
       <DependentUpon>Userinsert.cs</DependentUpon>
